@@ -1,3 +1,6 @@
+# Name: Karthik S Rajan
+# Roll No.: 2025AG05779
+
 # End-to-End Data Management Pipeline for a Book Recommendation System
 
 Data Management for Machine Learning - Assignment 2. A modular, reproducible pipeline:
@@ -7,7 +10,8 @@ plus a serving layer (top-K with cold-start fallback) and an auto-generated fina
 ![architecture](reports/architecture_diagram.png)
 
 ## Data
-* **items** - real Goodreads books metadata (20,068 rows; CSV not redistributed here - pass its path with `--source-csv`).
+* **source** - https://www.kaggle.com/datasets/khanhdnguyen/goodreadss-books/data (file: `Goodreadss Books.csv`)
+* **items** - real Goodreads books metadata (20,068 rows; CSV not redistributed here - download it from the link above and pass its path with `--source-csv`).
 * **users / interactions** - *synthetic, documented* (see `src/ingestion/ingest.py`): ratings are drawn from each book's real 1-5 star histogram; ~2 % faults are injected to exercise validation.
   Model scores therefore describe the simulator, not real Goodreads behaviour.
 
