@@ -1,0 +1,337 @@
+{
+  "run_id": "20261112-044122",
+  "workflow": "recsys_data_pipeline",
+  "mode": "orchestrated",
+  "config_hash": "8726e8b0e8a8",
+  "started": "2026-11-12T04:41:22",
+  "status": "success",
+  "tasks": [
+    {
+      "name": "ingest_data",
+      "deps": [],
+      "description": "load Goodreads items, simulate users + interactions, inject faults",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 3.5,
+      "start": "2026-11-12T04:41:22",
+      "end": "2026-11-12T04:41:26",
+      "message": "",
+      "result": {
+        "items": 20068,
+        "users": 4015,
+        "interactions": 126106,
+        "faults_injected": 2600
+      }
+    },
+    {
+      "name": "validate_data",
+      "deps": [
+        "ingest_data"
+      ],
+      "description": "Pandera schemas + custom rules -> error dataset + validation report",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 1.67,
+      "start": "2026-11-12T04:41:26",
+      "end": "2026-11-12T04:41:27",
+      "message": "",
+      "result": {
+        "interaction_reject_ratio": 0.02198150762057317,
+        "all_injected_faults_detected": true
+      }
+    },
+    {
+      "name": "quality_gate",
+      "deps": [
+        "validate_data"
+      ],
+      "description": "stop the pipeline when too many rows are rejected",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.0,
+      "start": "2026-11-12T04:41:27",
+      "end": "2026-11-12T04:41:27",
+      "message": "",
+      "result": {
+        "reject_ratio": 0.022,
+        "threshold": 0.05,
+        "passed": true
+      }
+    },
+    {
+      "name": "prepare_data",
+      "deps": [
+        "quality_gate"
+      ],
+      "description": "cleaning, imputation, standardisation",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 1.4,
+      "start": "2026-11-12T04:41:27",
+      "end": "2026-11-12T04:41:29",
+      "message": "",
+      "result": {
+        "items_clean": 19384,
+        "users_clean": 3995,
+        "interactions_clean": 123334,
+        "repeated_pairs_removed": 0
+      }
+    },
+    {
+      "name": "transform_split",
+      "deps": [
+        "prepare_data"
+      ],
+      "description": "time-based split + activity / popularity / matrix",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.37,
+      "start": "2026-11-12T04:41:29",
+      "end": "2026-11-12T04:41:29",
+      "message": "",
+      "result": {
+        "cutoff": "2024-01-17 16:09:40.600000",
+        "val_cut": "2023-09-30 23:59:16.800000",
+        "n_train": 98667,
+        "n_test": 24667,
+        "n_train_fit": 83867,
+        "n_val": 14800,
+        "cold_start_users": 179,
+        "test_users": 3401,
+        "cold_items": 1,
+        "test_items": 2907,
+        "sparsity": 0.9913784154466583,
+        "matrix_users": 3816,
+        "matrix_items": 2999
+      }
+    },
+    {
+      "name": "build_features",
+      "deps": [
+        "transform_split"
+      ],
+      "description": "user / item / interaction features + catalog",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.71,
+      "start": "2026-11-12T04:41:29",
+      "end": "2026-11-12T04:41:30",
+      "message": "",
+      "result": {
+        "n_user_features": 11,
+        "n_item_features": 13,
+        "catalog_rows": 25,
+        "cold_start_test_rows": 5887
+      }
+    },
+    {
+      "name": "train_random",
+      "deps": [
+        "build_features"
+      ],
+      "description": "random sanity floor",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.61,
+      "start": "2026-11-12T04:41:30",
+      "end": "2026-11-12T04:41:30",
+      "message": "",
+      "result": {
+        "model": "Random (sanity floor)",
+        "NDCG@10": 0.002846318816074351,
+        "fit_seconds": 0.0,
+        "best_params": {}
+      }
+    },
+    {
+      "name": "train_popularity",
+      "deps": [
+        "build_features"
+      ],
+      "description": "popularity baseline",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.53,
+      "start": "2026-11-12T04:41:30",
+      "end": "2026-11-12T04:41:31",
+      "message": "",
+      "result": {
+        "model": "Popularity (baseline)",
+        "NDCG@10": 0.026608948352288588,
+        "fit_seconds": 0.0,
+        "best_params": {}
+      }
+    },
+    {
+      "name": "train_als",
+      "deps": [
+        "build_features"
+      ],
+      "description": "implicit ALS (tuned)",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 11.42,
+      "start": "2026-11-12T04:41:31",
+      "end": "2026-11-12T04:41:42",
+      "message": "",
+      "result": {
+        "model": "ALS (implicit MF)",
+        "NDCG@10": 0.036477548450524935,
+        "fit_seconds": 0.64,
+        "best_params": {
+          "factors": 32,
+          "regularization": 0.1,
+          "alpha": 10
+        }
+      }
+    },
+    {
+      "name": "train_svd",
+      "deps": [
+        "build_features"
+      ],
+      "description": "Surprise SVD (tuned)",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 6.97,
+      "start": "2026-11-12T04:41:42",
+      "end": "2026-11-12T04:41:49",
+      "message": "",
+      "result": {
+        "model": "SVD (Surprise MF)",
+        "NDCG@10": 0.0014986014551490717,
+        "fit_seconds": 0.91,
+        "best_params": {
+          "n_factors": 20,
+          "reg_all": 0.08
+        }
+      }
+    },
+    {
+      "name": "train_itemknn",
+      "deps": [
+        "build_features"
+      ],
+      "description": "item-based CF (tuned)",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 5.1,
+      "start": "2026-11-12T04:41:49",
+      "end": "2026-11-12T04:41:54",
+      "message": "",
+      "result": {
+        "model": "ItemKNN (cosine CF)",
+        "NDCG@10": 0.044903219482368105,
+        "fit_seconds": 0.53,
+        "best_params": {
+          "k": 100,
+          "shrink": 50.0
+        }
+      }
+    },
+    {
+      "name": "train_content",
+      "deps": [
+        "build_features"
+      ],
+      "description": "content-based genre profile",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.61,
+      "start": "2026-11-12T04:41:54",
+      "end": "2026-11-12T04:41:55",
+      "message": "",
+      "result": {
+        "model": "Content-based (genres)",
+        "NDCG@10": 0.011225915051996533,
+        "fit_seconds": 0.01,
+        "best_params": {}
+      }
+    },
+    {
+      "name": "train_hybrid",
+      "deps": [
+        "train_als",
+        "train_itemknn",
+        "train_content"
+      ],
+      "description": "hybrid blend (tuned weights)",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 26.55,
+      "start": "2026-11-12T04:41:55",
+      "end": "2026-11-12T04:42:21",
+      "message": "",
+      "result": {
+        "model": "Hybrid (ItemKNN + ALS + content)",
+        "NDCG@10": 0.044158608164513044,
+        "fit_seconds": 1.22,
+        "best_params": {
+          "w_als": 2.0,
+          "w_content": 0.25,
+          "w_pop": 0.15
+        }
+      }
+    },
+    {
+      "name": "evaluate_models",
+      "deps": [
+        "train_random",
+        "train_popularity",
+        "train_als",
+        "train_svd",
+        "train_itemknn",
+        "train_content",
+        "train_hybrid"
+      ],
+      "description": "results table, bootstrap CIs, significance tests, MLflow summary",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 1.42,
+      "start": "2026-11-12T04:42:21",
+      "end": "2026-11-12T04:42:23",
+      "message": "",
+      "result": {
+        "best_model": "ItemKNN (cosine CF)",
+        "best_NDCG@10": 0.044903219482368105,
+        "n_models": 7
+      }
+    },
+    {
+      "name": "batch_recommend",
+      "deps": [
+        "evaluate_models"
+      ],
+      "description": "top-10 lists for every user (prediction-time features)",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 0.86,
+      "start": "2026-11-12T04:42:23",
+      "end": "2026-11-12T04:42:24",
+      "message": "",
+      "result": {
+        "users": 3816,
+        "model": "ItemKNN (cosine CF)"
+      }
+    },
+    {
+      "name": "publish_reports",
+      "deps": [
+        "evaluate_models",
+        "batch_recommend"
+      ],
+      "description": "figures + final PDF report + run manifest",
+      "status": "success",
+      "attempts": 1,
+      "seconds": 1.69,
+      "start": "2026-11-12T04:42:24",
+      "end": "2026-11-12T04:42:25",
+      "message": "",
+      "result": {
+        "report": "reports/final_report.pdf"
+      }
+    }
+  ],
+  "seconds": 63.4,
+  "ended": "2026-11-12T04:42:25"
+}

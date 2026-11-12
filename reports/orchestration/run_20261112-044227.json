@@ -1,0 +1,243 @@
+{
+  "run_id": "20261112-044227",
+  "workflow": "recsys_data_pipeline",
+  "mode": "scheduled",
+  "config_hash": "8726e8b0e8a8",
+  "started": "2026-11-12T04:42:27",
+  "status": "success",
+  "tasks": [
+    {
+      "name": "ingest_data",
+      "deps": [],
+      "description": "load Goodreads items, simulate users + interactions, inject faults",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "validate_data",
+      "deps": [
+        "ingest_data"
+      ],
+      "description": "Pandera schemas + custom rules -> error dataset + validation report",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "quality_gate",
+      "deps": [
+        "validate_data"
+      ],
+      "description": "stop the pipeline when too many rows are rejected",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "prepare_data",
+      "deps": [
+        "quality_gate"
+      ],
+      "description": "cleaning, imputation, standardisation",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "transform_split",
+      "deps": [
+        "prepare_data"
+      ],
+      "description": "time-based split + activity / popularity / matrix",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "build_features",
+      "deps": [
+        "transform_split"
+      ],
+      "description": "user / item / interaction features + catalog",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_random",
+      "deps": [
+        "build_features"
+      ],
+      "description": "random sanity floor",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_popularity",
+      "deps": [
+        "build_features"
+      ],
+      "description": "popularity baseline",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_als",
+      "deps": [
+        "build_features"
+      ],
+      "description": "implicit ALS (tuned)",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_svd",
+      "deps": [
+        "build_features"
+      ],
+      "description": "Surprise SVD (tuned)",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_itemknn",
+      "deps": [
+        "build_features"
+      ],
+      "description": "item-based CF (tuned)",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_content",
+      "deps": [
+        "build_features"
+      ],
+      "description": "content-based genre profile",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "train_hybrid",
+      "deps": [
+        "train_als",
+        "train_itemknn",
+        "train_content"
+      ],
+      "description": "hybrid blend (tuned weights)",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "evaluate_models",
+      "deps": [
+        "train_random",
+        "train_popularity",
+        "train_als",
+        "train_svd",
+        "train_itemknn",
+        "train_content",
+        "train_hybrid"
+      ],
+      "description": "results table, bootstrap CIs, significance tests, MLflow summary",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "batch_recommend",
+      "deps": [
+        "evaluate_models"
+      ],
+      "description": "top-10 lists for every user (prediction-time features)",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    },
+    {
+      "name": "publish_reports",
+      "deps": [
+        "evaluate_models",
+        "batch_recommend"
+      ],
+      "description": "figures + final PDF report + run manifest",
+      "status": "cached",
+      "attempts": 0,
+      "seconds": 0.0,
+      "start": null,
+      "end": null,
+      "message": "succeeded in the previous run with identical config - skipped",
+      "result": null
+    }
+  ],
+  "seconds": 0.0,
+  "ended": "2026-11-12T04:42:27"
+}

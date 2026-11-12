@@ -1,0 +1,35 @@
+{
+  "key": "popularity",
+  "name": "Popularity (baseline)",
+  "params": {
+    "prior_strength": 20
+  },
+  "best_params": {},
+  "metrics": {
+    "Precision@5": 0.019666775563541326,
+    "Recall@5": 0.020097903966310046,
+    "NDCG@5": 0.024242111614605197,
+    "Coverage@5": 0.004668222740913638,
+    "Diversity@5": 0.01675650291144848,
+    "Precision@10": 0.015387128389415227,
+    "Recall@10": 0.03244272242825324,
+    "NDCG@10": 0.026608948352288588,
+    "Coverage@10": 0.008002667555851951,
+    "Diversity@10": 0.29604554176330566,
+    "RMSE": 0.9336059453150657,
+    "MAE": 0.7540474116095286
+  },
+  "fit_seconds": 0.0012044906616210938,
+  "tuning": [],
+  "mlflow_run_id": "d06aeab9bdaf4142be7776aeebb357f5",
+  "model_path": "models/popularity_baseline.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

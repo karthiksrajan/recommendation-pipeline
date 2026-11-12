@@ -1,0 +1,48 @@
+2026-11-12 04:41:22,526 | recsys.orchestrator | === run 20261112-044122 | workflow 'recsys_data_pipeline' | 16 tasks | resume=False ===
+2026-11-12 04:41:22,526 | recsys.orchestrator | > ingest_data (attempt 1)
+2026-11-12 04:41:23,004 | recsys.ingestion | items loaded: (20068, 23) | boilerplate genre prefix in 100.0% of genre strings
+2026-11-12 04:41:25,998 | recsys.ingestion | source extracts written to data/raw/: items=(20068, 23) users=(4015, 4) interactions=(126106, 5)
+2026-11-12 04:41:26,025 | recsys.orchestrator | > validate_data (attempt 1)
+2026-11-12 04:41:27,497 | recsys.validation | users         rows=  4,015 | rejected=    20 | warning rows=   69
+2026-11-12 04:41:27,544 | recsys.validation | items         rows= 20,068 | rejected=   684 | warning rows=7,110
+2026-11-12 04:41:27,608 | recsys.validation | interactions  rows=126,106 | rejected= 2,772 | warning rows=    0
+2026-11-12 04:41:27,684 | recsys.validation | interactions rejected: 2,772 (2.20%) | report -> reports/data_validation_report.html
+2026-11-12 04:41:27,696 | recsys.orchestrator | > quality_gate (attempt 1)
+2026-11-12 04:41:27,696 | recsys.orchestrator | > prepare_data (attempt 1)
+2026-11-12 04:41:28,917 | recsys.preparation | repeated (user,item) pairs removed (kept latest): 0
+2026-11-12 04:41:28,980 | recsys.preparation | items_clean          (19384, 21)  nulls (excl. optional star-histogram cols) = 0
+2026-11-12 04:41:28,987 | recsys.preparation | users_clean          (3995, 4)  nulls (excl. optional star-histogram cols) = 0
+2026-11-12 04:41:29,081 | recsys.preparation | interactions_clean   (123334, 5)  nulls (excl. optional star-histogram cols) = 0
+2026-11-12 04:41:29,093 | recsys.orchestrator | > transform_split (attempt 1)
+2026-11-12 04:41:29,206 | recsys.transformation | cutoff 2024-01-17 16:09:40.600000 | validation cut 2023-09-30 23:59:16.800000
+2026-11-12 04:41:29,207 | recsys.transformation | train 98,667 | test 24,667 | (train_fit 83,867 / val 14,800)
+2026-11-12 04:41:29,207 | recsys.transformation | test users never seen in train (cold-start): 179 of 3401 | test items unseen in train: 1 of 2907
+2026-11-12 04:41:29,453 | recsys.transformation | user-item matrix: 3,816 users x 2,999 items | nnz=98,667 | sparsity=99.14%
+2026-11-12 04:41:29,460 | recsys.orchestrator | > build_features (attempt 1)
+2026-11-12 04:41:29,748 | recsys.features | user_features (3816, 12) | item_features (19384, 14) | user_category_share (28390, 3)
+2026-11-12 04:41:30,162 | recsys.features | training frame (98667, 32) | test frame (24667, 32) (same code path, train-derived stats) | cold-start test rows: 5887
+2026-11-12 04:41:30,172 | recsys.orchestrator | > train_random (attempt 1)
+2026-11-12 04:41:30,766 | recsys.training | Random (sanity floor)                fit   0.0s | NDCG@10=0.0028  Recall@10=0.0040  RMSE=nan
+2026-11-12 04:41:30,780 | recsys.orchestrator | > train_popularity (attempt 1)
+2026-11-12 04:41:31,293 | recsys.training | Popularity (baseline)                fit   0.0s | NDCG@10=0.0266  Recall@10=0.0324  RMSE=0.9336
+2026-11-12 04:41:31,306 | recsys.orchestrator | > train_als (attempt 1)
+2026-11-12 04:41:41,649 | recsys.training | als: best on validation (val_NDCG@10) -> {'factors': 32, 'regularization': 0.1, 'alpha': 10}
+2026-11-12 04:41:42,708 | recsys.training | ALS (implicit MF)                    fit   0.6s | NDCG@10=0.0365  Recall@10=0.0458  RMSE=nan
+2026-11-12 04:41:42,726 | recsys.orchestrator | > train_svd (attempt 1)
+2026-11-12 04:41:48,303 | recsys.training | svd: best on validation (val_RMSE) -> {'n_factors': 20, 'reg_all': 0.08}
+2026-11-12 04:41:49,676 | recsys.training | SVD (Surprise MF)                    fit   0.9s | NDCG@10=0.0015  Recall@10=0.0024  RMSE=0.9317
+2026-11-12 04:41:49,693 | recsys.orchestrator | > train_itemknn (attempt 1)
+2026-11-12 04:41:53,723 | recsys.training | itemknn: best on validation (val_NDCG@10) -> {'k': 100, 'shrink': 50.0}
+2026-11-12 04:41:54,777 | recsys.training | ItemKNN (cosine CF)                  fit   0.5s | NDCG@10=0.0449  Recall@10=0.0567  RMSE=nan
+2026-11-12 04:41:54,797 | recsys.orchestrator | > train_content (attempt 1)
+2026-11-12 04:41:55,387 | recsys.training | Content-based (genres)               fit   0.0s | NDCG@10=0.0112  Recall@10=0.0135  RMSE=nan
+2026-11-12 04:41:55,405 | recsys.orchestrator | > train_hybrid (attempt 1)
+2026-11-12 04:42:19,730 | recsys.training | hybrid: best on validation (val_NDCG@10) -> {'w_als': 2.0, 'w_content': 0.25, 'w_pop': 0.15}
+2026-11-12 04:42:21,922 | recsys.training | Hybrid (ItemKNN + ALS + content)     fit   1.2s | NDCG@10=0.0442  Recall@10=0.0550  RMSE=nan
+2026-11-12 04:42:21,951 | recsys.orchestrator | > evaluate_models (attempt 1)
+2026-11-12 04:42:23,368 | recsys.evaluation | results table -> reports/model_results.csv | best personalised model by NDCG@10: ItemKNN (cosine CF) (0.0449)
+2026-11-12 04:42:23,368 | recsys.orchestrator | > batch_recommend (attempt 1)
+2026-11-12 04:42:24,226 | recsys.serving | batch recommendations (ItemKNN (cosine CF)): 3,816 users x 10 -> reports/top10_recommendations.parquet
+2026-11-12 04:42:24,231 | recsys.orchestrator | > publish_reports (attempt 1)
+2026-11-12 04:42:25,922 | recsys.reporting | figures, run manifest and final report written -> reports/final_report.pdf
+2026-11-12 04:42:27,307 | recsys.orchestrator | === run 20261112-044227 | workflow 'recsys_data_pipeline' | 16 tasks | resume=True ===

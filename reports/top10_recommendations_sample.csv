@@ -1,0 +1,501 @@
+user_id,rank,item_id,title,category
+U00001,1,2660,To Kill a Mockingbird,Classics
+U00001,2,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00001,3,1886,Pride and Prejudice,Classics
+U00001,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00001,5,8906,The Great Gatsby,Classics
+U00001,6,2661,To Kill a Mockingbird,Classics
+U00001,7,5470,1984,Classics
+U00001,8,14923,Pride and Prejudice,Classics
+U00001,9,1893,Pride and Prejudice,Classics
+U00001,10,7614,Animal Farm,Classics
+U00002,1,15871,Harry Potter à l'école des sorciers,Fantasy
+U00002,2,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00002,3,3356,Harry Potter y la piedra filosofal,Fantasy
+U00002,4,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00002,5,4256,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00002,6,5912,The Hobbit: Or There and Back Again,Fantasy
+U00002,7,15381,The Fellowship of the Ring,Fantasy
+U00002,8,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00002,9,19100,1984,Classics
+U00002,10,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00003,1,15868,Harry Potter y la piedra filosofal,Fantasy
+U00003,2,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00003,3,5908,The Hobbit,Fantasy
+U00003,4,18985,The Diary of Anne Frank,Classics
+U00003,5,2660,To Kill a Mockingbird,Classics
+U00003,6,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00003,7,19501,"Eat, Pray, Love",Autobiography
+U00003,8,1886,Pride and Prejudice,Classics
+U00003,9,2,Harry Potter and the Order of the Phoenix,Fantasy
+U00003,10,15871,Harry Potter à l'école des sorciers,Fantasy
+U00004,1,8906,The Great Gatsby,Classics
+U00004,2,19542,Where the Wild Things Are,Picture Books
+U00004,3,3356,Harry Potter y la piedra filosofal,Fantasy
+U00004,4,2660,To Kill a Mockingbird,Classics
+U00004,5,2661,To Kill a Mockingbird,Classics
+U00004,6,12247,The Odyssey,Classics
+U00004,7,7614,Animal Farm,Classics
+U00004,8,11017,Jane Eyre,Classics
+U00004,9,2,Harry Potter and the Order of the Phoenix,Fantasy
+U00004,10,9795,A Walk in the Woods: Rediscovering America on the Appalachian Trail,Travel
+U00005,1,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00005,2,15871,Harry Potter à l'école des sorciers,Fantasy
+U00005,3,14919,Pride and Prejudice,Classics
+U00005,4,2660,To Kill a Mockingbird,Classics
+U00005,5,4671,The Great Gatsby,Classics
+U00005,6,14235,The Great Gatsby,Classics
+U00005,7,1891,Pride and Prejudice,Classics
+U00005,8,14923,Pride and Prejudice,Classics
+U00005,9,5507,The Diary of Anne Frank,Classics
+U00005,10,6,Harry Potter and the Goblet of Fire,Fantasy
+U00006,1,18985,The Diary of Anne Frank,Classics
+U00006,2,2660,To Kill a Mockingbird,Classics
+U00006,3,969,The Da Vinci Code,Mystery
+U00006,4,8906,The Great Gatsby,Classics
+U00006,5,17059,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00006,6,901,Ender's Game,Science Fiction
+U00006,7,14048,The Time Traveler's Wife,Romance
+U00006,8,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00006,9,5908,The Hobbit,Fantasy
+U00006,10,15954,Le pagine della nostra vita,Romance
+U00007,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00007,2,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00007,3,15871,Harry Potter à l'école des sorciers,Fantasy
+U00007,4,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00007,5,14923,Pride and Prejudice,Classics
+U00007,6,15868,Harry Potter y la piedra filosofal,Fantasy
+U00007,7,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00007,8,1891,Pride and Prejudice,Classics
+U00007,9,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00007,10,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00008,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00008,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00008,3,15871,Harry Potter à l'école des sorciers,Fantasy
+U00008,4,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00008,5,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00008,6,15868,Harry Potter y la piedra filosofal,Fantasy
+U00008,7,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00008,8,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00008,9,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00008,10,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00009,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00009,2,15868,Harry Potter y la piedra filosofal,Fantasy
+U00009,3,18985,The Diary of Anne Frank,Classics
+U00009,4,14,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00009,5,5908,The Hobbit,Fantasy
+U00009,6,7677,Jurassic Park,Science Fiction
+U00009,7,17059,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00009,8,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00009,9,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00009,10,4976,Desde Mi Cielo,Mystery
+U00010,1,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00010,2,15871,Harry Potter à l'école des sorciers,Fantasy
+U00010,3,3356,Harry Potter y la piedra filosofal,Fantasy
+U00010,4,5478,Nineteen Eighty-Four,Classics
+U00010,5,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00010,6,5912,The Hobbit: Or There and Back Again,Fantasy
+U00010,7,1935,Little Women,Classics
+U00010,8,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00010,9,929,Memoirs of a Geisha,Historical
+U00010,10,15282,Die Gefährten,Fantasy
+U00012,1,1886,Pride and Prejudice,Classics
+U00012,2,18985,The Diary of Anne Frank,Classics
+U00012,3,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00012,4,3356,Harry Potter y la piedra filosofal,Fantasy
+U00012,5,7446,The Glass Castle,Autobiography
+U00012,6,3006,The Secret Garden,Classics
+U00012,7,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00012,8,11015,Jane Eyre,Classics
+U00012,9,4671,The Great Gatsby,Classics
+U00012,10,4679,The Great Gatsby,Classics
+U00013,1,15871,Harry Potter à l'école des sorciers,Fantasy
+U00013,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00013,3,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00013,4,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00013,5,931,Memoirs of a Geisha,Historical
+U00013,6,3356,Harry Potter y la piedra filosofal,Fantasy
+U00013,7,5912,The Hobbit: Or There and Back Again,Fantasy
+U00013,8,17261,The Hobbit,Fantasy
+U00013,9,15282,Die Gefährten,Fantasy
+U00013,10,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00014,1,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00014,2,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00014,3,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00014,4,5908,The Hobbit,Fantasy
+U00014,5,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00014,6,15331,The Fellowship of the Ring,Fantasy
+U00014,7,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00014,8,3356,Harry Potter y la piedra filosofal,Fantasy
+U00014,9,4223,The Da Vinci Code,Mystery
+U00014,10,936,Memoirs Of A Geisha,Historical
+U00015,1,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00015,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00015,3,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00015,4,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00015,5,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00015,6,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00015,7,5912,The Hobbit: Or There and Back Again,Fantasy
+U00015,8,15868,Harry Potter y la piedra filosofal,Fantasy
+U00015,9,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00015,10,1,Harry Potter and the Half-Blood Prince,Fantasy
+U00016,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00016,2,18985,The Diary of Anne Frank,Classics
+U00016,3,5908,The Hobbit,Fantasy
+U00016,4,2975,The Kite Runner,Historical
+U00016,5,15868,Harry Potter y la piedra filosofal,Fantasy
+U00016,6,2660,To Kill a Mockingbird,Classics
+U00016,7,10576,It (Eso,Horror
+U00016,8,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00016,9,2661,To Kill a Mockingbird,Classics
+U00016,10,15871,Harry Potter à l'école des sorciers,Fantasy
+U00017,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00017,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00017,3,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00017,4,14923,Pride and Prejudice,Classics
+U00017,5,4671,The Great Gatsby,Classics
+U00017,6,15871,Harry Potter à l'école des sorciers,Fantasy
+U00017,7,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00017,8,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00017,9,15868,Harry Potter y la piedra filosofal,Fantasy
+U00017,10,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00018,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00018,2,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00018,3,18985,The Diary of Anne Frank,Classics
+U00018,4,15868,Harry Potter y la piedra filosofal,Fantasy
+U00018,5,15871,Harry Potter à l'école des sorciers,Fantasy
+U00018,6,4671,The Great Gatsby,Classics
+U00018,7,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00018,8,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00018,9,1891,Pride and Prejudice,Classics
+U00018,10,2660,To Kill a Mockingbird,Classics
+U00019,1,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00019,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00019,3,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00019,4,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00019,5,15871,Harry Potter à l'école des sorciers,Fantasy
+U00019,6,5991,混血王子的背叛,Fantasy
+U00019,7,17261,The Hobbit,Fantasy
+U00019,8,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00019,9,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00019,10,2977,Drageløberen,Historical
+U00020,1,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00020,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00020,3,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00020,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00020,5,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00020,6,1,Harry Potter and the Half-Blood Prince,Fantasy
+U00020,7,5991,混血王子的背叛,Fantasy
+U00020,8,5,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00020,9,5912,The Hobbit: Or There and Back Again,Fantasy
+U00020,10,3356,Harry Potter y la piedra filosofal,Fantasy
+U00021,1,15868,Harry Potter y la piedra filosofal,Fantasy
+U00021,2,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00021,3,3356,Harry Potter y la piedra filosofal,Fantasy
+U00021,4,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00021,5,13354,Eragon,Fantasy
+U00021,6,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00021,7,2660,To Kill a Mockingbird,Classics
+U00021,8,15871,Harry Potter à l'école des sorciers,Fantasy
+U00021,9,17261,The Hobbit,Fantasy
+U00021,10,4671,The Great Gatsby,Classics
+U00022,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00022,2,15868,Harry Potter y la piedra filosofal,Fantasy
+U00022,3,15871,Harry Potter à l'école des sorciers,Fantasy
+U00022,4,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00022,5,2660,To Kill a Mockingbird,Classics
+U00022,6,17261,The Hobbit,Fantasy
+U00022,7,3356,Harry Potter y la piedra filosofal,Fantasy
+U00022,8,19501,"Eat, Pray, Love",Autobiography
+U00022,9,5908,The Hobbit,Fantasy
+U00022,10,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00023,1,1891,Pride and Prejudice,Classics
+U00023,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00023,3,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00023,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00023,5,2660,To Kill a Mockingbird,Classics
+U00023,6,18383,Jane Eyre,Classics
+U00023,7,5507,The Diary of Anne Frank,Classics
+U00023,8,1886,Pride and Prejudice,Classics
+U00023,9,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00023,10,14919,Pride and Prejudice,Classics
+U00024,1,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00024,2,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00024,3,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00024,4,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00024,5,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00024,6,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00024,7,15331,The Fellowship of the Ring,Fantasy
+U00024,8,15381,The Fellowship of the Ring,Fantasy
+U00024,9,15871,Harry Potter à l'école des sorciers,Fantasy
+U00024,10,936,Memoirs Of A Geisha,Historical
+U00025,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00025,2,15868,Harry Potter y la piedra filosofal,Fantasy
+U00025,3,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00025,4,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00025,5,15871,Harry Potter à l'école des sorciers,Fantasy
+U00025,6,3356,Harry Potter y la piedra filosofal,Fantasy
+U00025,7,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00025,8,15331,The Fellowship of the Ring,Fantasy
+U00025,9,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00025,10,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00026,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00026,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00026,3,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00026,4,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00026,5,5912,The Hobbit: Or There and Back Again,Fantasy
+U00026,6,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00026,7,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00026,8,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00026,9,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00026,10,15282,Die Gefährten,Fantasy
+U00027,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00027,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00027,3,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00027,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00027,5,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00027,6,15381,The Fellowship of the Ring,Fantasy
+U00027,7,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00027,8,936,Memoirs Of A Geisha,Historical
+U00027,9,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00027,10,5912,The Hobbit: Or There and Back Again,Fantasy
+U00028,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00028,2,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00028,3,19501,"Eat, Pray, Love",Autobiography
+U00028,4,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00028,5,2660,To Kill a Mockingbird,Classics
+U00028,6,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00028,7,19503,"Eat, Pray, Love: One Woman's Search for Everything Across Italy, India and Indonesia",Autobiography
+U00028,8,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00028,9,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00028,10,15868,Harry Potter y la piedra filosofal,Fantasy
+U00029,1,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00029,2,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00029,3,4256,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00029,4,5,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00029,5,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00029,6,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00029,7,15871,Harry Potter à l'école des sorciers,Fantasy
+U00029,8,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00029,9,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00029,10,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00030,1,15868,Harry Potter y la piedra filosofal,Fantasy
+U00030,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00030,3,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00030,4,1891,Pride and Prejudice,Classics
+U00030,5,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00030,6,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00030,7,11,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00030,8,104,Dune,Science Fiction
+U00030,9,7677,Jurassic Park,Science Fiction
+U00030,10,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00031,1,4671,The Great Gatsby,Classics
+U00031,2,1886,Pride and Prejudice,Classics
+U00031,3,14919,Pride and Prejudice,Classics
+U00031,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00031,5,2660,To Kill a Mockingbird,Classics
+U00031,6,1891,Pride and Prejudice,Classics
+U00031,7,15868,Harry Potter y la piedra filosofal,Fantasy
+U00031,8,5473,1984,Classics
+U00031,9,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00031,10,190,A Wrinkle in Time,Fantasy
+U00032,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00032,2,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00032,3,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00032,4,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00032,5,3356,Harry Potter y la piedra filosofal,Fantasy
+U00032,6,6902,La Dernière Leçon,Autobiography
+U00032,7,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00032,8,15868,Harry Potter y la piedra filosofal,Fantasy
+U00032,9,2660,To Kill a Mockingbird,Classics
+U00032,10,15352,The Fellowship of the Ring,Fantasy
+U00033,1,15871,Harry Potter à l'école des sorciers,Fantasy
+U00033,2,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00033,3,2975,The Kite Runner,Historical
+U00033,4,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00033,5,1,Harry Potter and the Half-Blood Prince,Fantasy
+U00033,6,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00033,7,5,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00033,8,936,Memoirs Of A Geisha,Historical
+U00033,9,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00033,10,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00034,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00034,2,5478,Nineteen Eighty-Four,Classics
+U00034,3,5507,The Diary of Anne Frank,Classics
+U00034,4,1886,Pride and Prejudice,Classics
+U00034,5,2660,To Kill a Mockingbird,Classics
+U00034,6,4671,The Great Gatsby,Classics
+U00034,7,1891,Pride and Prejudice,Classics
+U00034,8,18135,Romeo and Juliet,Classics
+U00034,9,12024,Twilight,Young Adult
+U00034,10,10214,Jane Eyre,Classics
+U00035,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00035,2,4976,Desde Mi Cielo,Mystery
+U00035,3,14,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00035,4,960,Angels & Demons,Mystery
+U00035,5,9737,Ender's Game,Science Fiction
+U00035,6,6388,The Da Vinci Code,Mystery
+U00035,7,536,The Lovely Bones,Mystery
+U00035,8,5907,"The Hobbit, or There and Back Again",Fantasy
+U00035,9,15806,The Lovely Bones,Mystery
+U00035,10,5908,The Hobbit,Fantasy
+U00036,1,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00036,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00036,3,5470,1984,Classics
+U00036,4,5477,1984,Classics
+U00036,5,5991,混血王子的背叛,Fantasy
+U00036,6,4671,The Great Gatsby,Classics
+U00036,7,2,Harry Potter and the Order of the Phoenix,Fantasy
+U00036,8,2661,To Kill a Mockingbird,Classics
+U00036,9,15871,Harry Potter à l'école des sorciers,Fantasy
+U00036,10,14919,Pride and Prejudice,Classics
+U00037,1,5110,The Catcher In The Rye,Classics
+U00037,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00037,3,7612,Of Mice and Men,Classics
+U00037,4,15871,Harry Potter à l'école des sorciers,Fantasy
+U00037,5,1892,The Annotated Pride & Prejudice,Classics
+U00037,6,326,One Hundred Years of Solitude,Classics
+U00037,7,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00037,8,8130,Anne of Green Gables,Classics
+U00037,9,2550,On the Road,Classics
+U00037,10,5471,Nineteen Eighty-Four,Classics
+U00038,1,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00038,2,15381,The Fellowship of the Ring,Fantasy
+U00038,3,5910,The Annotated Hobbit,Fantasy
+U00038,4,5912,The Hobbit: Or There and Back Again,Fantasy
+U00038,5,17261,The Hobbit,Fantasy
+U00038,6,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00038,7,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00038,8,194,A Wrinkle in Time,Fantasy
+U00038,9,18003,The Gunslinger,Fantasy
+U00038,10,15352,The Fellowship of the Ring,Fantasy
+U00039,1,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00039,2,15868,Harry Potter y la piedra filosofal,Fantasy
+U00039,3,15871,Harry Potter à l'école des sorciers,Fantasy
+U00039,4,3356,Harry Potter y la piedra filosofal,Fantasy
+U00039,5,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00039,6,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00039,7,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00039,8,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00039,9,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00039,10,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00040,1,6185,Wuthering Heights,Classics
+U00040,2,2565,Pride and Prejudice,Classics
+U00040,3,15769,The Bourne Supremacy,Thriller
+U00040,4,1893,Pride and Prejudice,Classics
+U00040,5,4674,The Great Gatsby,Classics
+U00040,6,12297,The Scarlet Letter,Classics
+U00040,7,1934,Little Women,Classics
+U00040,8,7355,The Shipping News,Cultural
+U00040,9,15954,Le pagine della nostra vita,Romance
+U00040,10,5471,Nineteen Eighty-Four,Classics
+U00041,1,1891,Pride and Prejudice,Classics
+U00041,2,3356,Harry Potter y la piedra filosofal,Fantasy
+U00041,3,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00041,4,2657,To Kill a Mockingbird,Classics
+U00041,5,17261,The Hobbit,Fantasy
+U00041,6,15871,Harry Potter à l'école des sorciers,Fantasy
+U00041,7,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00041,8,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00041,9,5910,The Annotated Hobbit,Fantasy
+U00041,10,5102,The Handmaid's Tale,Classics
+U00042,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00042,2,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00042,3,15871,Harry Potter à l'école des sorciers,Fantasy
+U00042,4,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00042,5,5912,The Hobbit: Or There and Back Again,Fantasy
+U00042,6,15885,Harry Potter et la Chambre des Secrets,Fantasy
+U00042,7,15878,Harry Potter and the Chamber of Secrets,Fantasy
+U00042,8,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00042,9,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00042,10,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00043,1,15871,Harry Potter à l'école des sorciers,Fantasy
+U00043,2,14919,Pride and Prejudice,Classics
+U00043,3,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00043,4,2975,The Kite Runner,Historical
+U00043,5,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00043,6,15282,Die Gefährten,Fantasy
+U00043,7,3356,Harry Potter y la piedra filosofal,Fantasy
+U00043,8,5470,1984,Classics
+U00043,9,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00043,10,4672,The Great Gatsby,Classics
+U00044,1,1891,Pride and Prejudice,Classics
+U00044,2,15868,Harry Potter y la piedra filosofal,Fantasy
+U00044,3,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00044,4,3356,Harry Potter y la piedra filosofal,Fantasy
+U00044,5,4976,Desde Mi Cielo,Mystery
+U00044,6,15871,Harry Potter à l'école des sorciers,Fantasy
+U00044,7,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00044,8,960,Angels & Demons,Mystery
+U00044,9,11,The Hitchhiker's Guide to the Galaxy,Science Fiction
+U00044,10,14739,Ender's Game,Science Fiction
+U00045,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00045,2,1891,Pride and Prejudice,Classics
+U00045,3,11017,Jane Eyre,Classics
+U00045,4,4679,The Great Gatsby,Classics
+U00045,5,18985,The Diary of Anne Frank,Classics
+U00045,6,5507,The Diary of Anne Frank,Classics
+U00045,7,5102,The Handmaid's Tale,Classics
+U00045,8,5470,1984,Classics
+U00045,9,4671,The Great Gatsby,Classics
+U00045,10,4674,The Great Gatsby,Classics
+U00046,1,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00046,2,15871,Harry Potter à l'école des sorciers,Fantasy
+U00046,3,15282,Die Gefährten,Fantasy
+U00046,4,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00046,5,4256,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00046,6,4,Harry Potter and the Chamber of Secrets,Fantasy
+U00046,7,2977,Drageløberen,Historical
+U00046,8,15304,La compagnia dell'anello,Fantasy
+U00046,9,14923,Pride and Prejudice,Classics
+U00046,10,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00047,1,3356,Harry Potter y la piedra filosofal,Fantasy
+U00047,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00047,3,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00047,4,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00047,5,15868,Harry Potter y la piedra filosofal,Fantasy
+U00047,6,14923,Pride and Prejudice,Classics
+U00047,7,15282,Die Gefährten,Fantasy
+U00047,8,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00047,9,17261,The Hobbit,Fantasy
+U00047,10,5912,The Hobbit: Or There and Back Again,Fantasy
+U00048,1,15871,Harry Potter à l'école des sorciers,Fantasy
+U00048,2,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00048,3,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00048,4,5908,The Hobbit,Fantasy
+U00048,5,15882,Harrius Potter et Camera Secretorum,Fantasy
+U00048,6,3356,Harry Potter y la piedra filosofal,Fantasy
+U00048,7,5907,"The Hobbit, or There and Back Again",Fantasy
+U00048,8,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00048,9,15876,Harry Potter y la Orden del Fénix,Fantasy
+U00048,10,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00049,1,14922,Pride and Prejudice (The Century Jane Austen I,Classics
+U00049,2,2,Harry Potter and the Order of the Phoenix,Fantasy
+U00049,3,4671,The Great Gatsby,Classics
+U00049,4,2657,To Kill a Mockingbird,Classics
+U00049,5,15282,Die Gefährten,Fantasy
+U00049,6,14918,Pride and Prejudice,Classics
+U00049,7,11015,Jane Eyre,Classics
+U00049,8,5477,1984,Classics
+U00049,9,3356,Harry Potter y la piedra filosofal,Fantasy
+U00049,10,15304,La compagnia dell'anello,Fantasy
+U00050,1,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00050,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00050,3,15872,Harry Potter y el misterio del príncipe,Fantasy
+U00050,4,5908,The Hobbit,Fantasy
+U00050,5,3354,Harry Potter et la Chambre des Secrets,Fantasy
+U00050,6,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00050,7,3356,Harry Potter y la piedra filosofal,Fantasy
+U00050,8,15331,The Fellowship of the Ring,Fantasy
+U00050,9,15868,Harry Potter y la piedra filosofal,Fantasy
+U00050,10,1891,Pride and Prejudice,Classics
+U00051,1,3357,Harry Potter Y La Piedra Filosofal,Fantasy
+U00051,2,4255,Harry Potter and the Philosopher's Stone,Fantasy
+U00051,3,3,Harry Potter and the Sorcerer's Stone,Fantasy
+U00051,4,15880,Harrius Potter et Philosophi Lapis,Fantasy
+U00051,5,15871,Harry Potter à l'école des sorciers,Fantasy
+U00051,6,5912,The Hobbit: Or There and Back Again,Fantasy
+U00051,7,4256,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00051,8,17261,The Hobbit,Fantasy
+U00051,9,5,Harry Potter and the Prisoner of Azkaban,Fantasy
+U00051,10,15885,Harry Potter et la Chambre des Secrets,Fantasy

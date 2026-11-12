@@ -1,0 +1,72 @@
+{
+  "key": "itemknn",
+  "name": "ItemKNN (cosine CF)",
+  "params": {
+    "k": 100,
+    "shrink": 50.0
+  },
+  "best_params": {
+    "k": 100,
+    "shrink": 50.0
+  },
+  "metrics": {
+    "Precision@5": 0.0295328324077099,
+    "Recall@5": 0.029962581492822337,
+    "NDCG@5": 0.03770873040204687,
+    "Coverage@5": 0.12170723574524842,
+    "Diversity@5": 0.3423541486263275,
+    "Precision@10": 0.02600457366873571,
+    "Recall@10": 0.056669126060436864,
+    "NDCG@10": 0.044903219482368105,
+    "Coverage@10": 0.19073024341447148,
+    "Diversity@10": 0.40498533844947815,
+    "RMSE": NaN,
+    "MAE": NaN
+  },
+  "fit_seconds": 0.5298409461975098,
+  "tuning": [
+    {
+      "k": 30,
+      "shrink": 10.0,
+      "val_Precision@10": 0.016832412523020257,
+      "val_Recall@10": 0.044816186127255964,
+      "val_NDCG@10": 0.03305527637223574,
+      "val_RMSE": NaN
+    },
+    {
+      "k": 30,
+      "shrink": 50.0,
+      "val_Precision@10": 0.01731123388581952,
+      "val_Recall@10": 0.04552350280342063,
+      "val_NDCG@10": 0.032738392907122806,
+      "val_RMSE": NaN
+    },
+    {
+      "k": 100,
+      "shrink": 10.0,
+      "val_Precision@10": 0.0169060773480663,
+      "val_Recall@10": 0.04644030760304344,
+      "val_NDCG@10": 0.03335241347714714,
+      "val_RMSE": NaN
+    },
+    {
+      "k": 100,
+      "shrink": 50.0,
+      "val_Precision@10": 0.017937384898710867,
+      "val_Recall@10": 0.04822970293612155,
+      "val_NDCG@10": 0.034610827509782685,
+      "val_RMSE": NaN
+    }
+  ],
+  "mlflow_run_id": "7851596f875f40319664a9e3f737c45d",
+  "model_path": "models/itemknn_cosine_cf.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

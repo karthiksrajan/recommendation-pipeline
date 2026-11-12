@@ -1,0 +1,15 @@
+,injected
+interactions: rating out of range,251
+interactions: rating wrong dtype,251
+interactions: rating missing,251
+interactions: user_id missing,251
+interactions: timestamp invalid,251
+interactions: timestamp in future,251
+interactions: orphan user_id,251
+interactions: orphan item_id,251
+interactions: timestamp before signup,251
+interactions: exact duplicate rows,251
+users: country missing,40
+users: invalid age_group,30
+users: invalid/future signup_date,5
+users: duplicate user_id rows,15

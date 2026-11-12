@@ -1,0 +1,115 @@
+{
+  "key": "als",
+  "name": "ALS (implicit MF)",
+  "params": {
+    "factors": 32,
+    "regularization": 0.1,
+    "alpha": 10,
+    "iterations": 20
+  },
+  "best_params": {
+    "factors": 32,
+    "regularization": 0.1,
+    "alpha": 10
+  },
+  "metrics": {
+    "Precision@5": 0.024240444299248612,
+    "Recall@5": 0.024822647159722173,
+    "NDCG@5": 0.03066306354695229,
+    "Coverage@5": 0.1993997999333111,
+    "Diversity@5": 0.5584564805030823,
+    "Precision@10": 0.021430904933028426,
+    "Recall@10": 0.04576238099260837,
+    "NDCG@10": 0.036477548450524935,
+    "Coverage@10": 0.2644214738246082,
+    "Diversity@10": 0.5886008739471436,
+    "RMSE": NaN,
+    "MAE": NaN
+  },
+  "fit_seconds": 0.6412246227264404,
+  "tuning": [
+    {
+      "factors": 32,
+      "regularization": 0.01,
+      "alpha": 10,
+      "val_Precision@10": 0.015322283609576428,
+      "val_Recall@10": 0.04249309789011407,
+      "val_NDCG@10": 0.031604612759694624,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 32,
+      "regularization": 0.01,
+      "alpha": 40,
+      "val_Precision@10": 0.014953959484346227,
+      "val_Recall@10": 0.03759766335358725,
+      "val_NDCG@10": 0.0282162798094841,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 32,
+      "regularization": 0.1,
+      "alpha": 10,
+      "val_Precision@10": 0.01539594843462247,
+      "val_Recall@10": 0.04216417770441992,
+      "val_NDCG@10": 0.03165055116835076,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 32,
+      "regularization": 0.1,
+      "alpha": 40,
+      "val_Precision@10": 0.014732965009208104,
+      "val_Recall@10": 0.03731138599704532,
+      "val_NDCG@10": 0.027750740743712504,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 64,
+      "regularization": 0.01,
+      "alpha": 10,
+      "val_Precision@10": 0.012007366482504604,
+      "val_Recall@10": 0.034373096331042845,
+      "val_NDCG@10": 0.02345954928233713,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 64,
+      "regularization": 0.01,
+      "alpha": 40,
+      "val_Precision@10": 0.011749539594843462,
+      "val_Recall@10": 0.030824240291487344,
+      "val_NDCG@10": 0.022538031566418662,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 64,
+      "regularization": 0.1,
+      "alpha": 10,
+      "val_Precision@10": 0.012117863720073667,
+      "val_Recall@10": 0.034483352247684854,
+      "val_NDCG@10": 0.023410563806430577,
+      "val_RMSE": NaN
+    },
+    {
+      "factors": 64,
+      "regularization": 0.1,
+      "alpha": 40,
+      "val_Precision@10": 0.011344383057090242,
+      "val_Recall@10": 0.030316835846792414,
+      "val_NDCG@10": 0.02221944472935094,
+      "val_RMSE": NaN
+    }
+  ],
+  "mlflow_run_id": "9dbd639a61944c9d99996997c0ed12ba",
+  "model_path": "models/als_implicit_mf.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

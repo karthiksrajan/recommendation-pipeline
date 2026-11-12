@@ -1,0 +1,74 @@
+{
+  "key": "svd",
+  "name": "SVD (Surprise MF)",
+  "params": {
+    "n_factors": 20,
+    "n_epochs": 30,
+    "lr_all": 0.005,
+    "reg_all": 0.08
+  },
+  "best_params": {
+    "n_factors": 20,
+    "reg_all": 0.08
+  },
+  "metrics": {
+    "Precision@5": 0.0008493956223456387,
+    "Recall@5": 0.0010371085828097602,
+    "NDCG@5": 0.0009031223289226188,
+    "Coverage@5": 0.012004001333777926,
+    "Diversity@5": 0.8621612787246704,
+    "Precision@10": 0.0011434171839268213,
+    "Recall@10": 0.002380868184683067,
+    "NDCG@10": 0.0014986014551490717,
+    "Coverage@10": 0.02634211403801267,
+    "Diversity@10": 0.8150360584259033,
+    "RMSE": 0.9317163654888793,
+    "MAE": 0.731608804416929
+  },
+  "fit_seconds": 0.9094533920288086,
+  "tuning": [
+    {
+      "n_factors": 20,
+      "reg_all": 0.02,
+      "val_Precision@10": 0.0015101289134438305,
+      "val_Recall@10": 0.004845976869457533,
+      "val_NDCG@10": 0.002977137472448892,
+      "val_RMSE": 0.9453832000655022
+    },
+    {
+      "n_factors": 20,
+      "reg_all": 0.08,
+      "val_Precision@10": 0.0011049723756906078,
+      "val_Recall@10": 0.0033883872149228023,
+      "val_NDCG@10": 0.0020661671645792958,
+      "val_RMSE": 0.9397101201272215
+    },
+    {
+      "n_factors": 50,
+      "reg_all": 0.02,
+      "val_Precision@10": 0.0016942909760589318,
+      "val_Recall@10": 0.004565967147022686,
+      "val_NDCG@10": 0.0027366623386127485,
+      "val_RMSE": 0.9524894114386203
+    },
+    {
+      "n_factors": 50,
+      "reg_all": 0.08,
+      "val_Precision@10": 0.000994475138121547,
+      "val_Recall@10": 0.002024067727431393,
+      "val_NDCG@10": 0.001298101076039885,
+      "val_RMSE": 0.9420638824625154
+    }
+  ],
+  "mlflow_run_id": "8c23be632e0b41e89f60bae9835c7ef7",
+  "model_path": "models/svd_surprise_mf.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

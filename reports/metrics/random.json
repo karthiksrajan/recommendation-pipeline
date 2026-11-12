@@ -1,0 +1,35 @@
+{
+  "key": "random",
+  "name": "Random (sanity floor)",
+  "params": {
+    "seed": 42
+  },
+  "best_params": {},
+  "metrics": {
+    "Precision@5": 0.001568114995099641,
+    "Recall@5": 0.0019594810667634267,
+    "NDCG@5": 0.0020257815222685595,
+    "Coverage@5": 0.9953317772590864,
+    "Diversity@5": 0.8007946610450745,
+    "Precision@10": 0.0016987912446912777,
+    "Recall@10": 0.003979871313891489,
+    "NDCG@10": 0.002846318816074351,
+    "Coverage@10": 1.0,
+    "Diversity@10": 0.8008930683135986,
+    "RMSE": NaN,
+    "MAE": NaN
+  },
+  "fit_seconds": 0.00043773651123046875,
+  "tuning": [],
+  "mlflow_run_id": "11505d3396d0456ab352681026a9a3cd",
+  "model_path": "models/random_sanity_floor.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

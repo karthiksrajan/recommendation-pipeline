@@ -1,0 +1,44 @@
+{
+  "users": {
+    "rows": 4015,
+    "rejected_rows": 20,
+    "warning_rows": 69,
+    "rules": {
+      "age_group_valid": 30,
+      "dtype_mismatch": 2,
+      "duplicate_user_id": 15,
+      "not_nullable": 40,
+      "signup_date<=end_date": 3
+    }
+  },
+  "items": {
+    "rows": 20068,
+    "rejected_rows": 684,
+    "warning_rows": 7110,
+    "rules": {
+      "duplicate_bookId": 127,
+      "missing_language": 2779,
+      "missing_num_pages": 1640,
+      "missing_publish_date": 644,
+      "missing_star_histogram": 3430,
+      "no_usable_genres": 5087,
+      "not_nullable": 1677,
+      "num_pages_in_[1,10000]": 652
+    }
+  },
+  "interactions": {
+    "rows": 126106,
+    "rejected_rows": 2772,
+    "warning_rows": 0,
+    "rules": {
+      "dtype_mismatch": 502,
+      "duplicate_row": 251,
+      "not_nullable": 502,
+      "rating_in_{1..5}": 251,
+      "ref_integrity_item": 251,
+      "ref_integrity_user": 516,
+      "timestamp<=end_date": 251,
+      "timestamp>=signup_date": 250
+    }
+  }
+}

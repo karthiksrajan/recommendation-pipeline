@@ -1,0 +1,146 @@
+{
+  "created": "2026-11-12T04:42:25",
+  "config": {
+    "seed": 42,
+    "n_users": 4000,
+    "catalog_size": 3000,
+    "min_num_ratings": 2000,
+    "start_date": "2019-01-01",
+    "end_date": "2024-06-30",
+    "fault_rate": 0.02,
+    "test_fraction": 0.2,
+    "val_fraction": 0.15,
+    "positive_threshold": 4,
+    "ks": [
+      5,
+      10
+    ],
+    "bayes_prior": 20,
+    "max_reject_ratio": 0.05,
+    "source_csv": "/kaggle/input/datasets/karthiksundararajan/goodread-books/Goodreadss Books.csv"
+  },
+  "split": {
+    "cutoff": "2024-01-17 16:09:40.600000",
+    "val_cut": "2023-09-30 23:59:16.800000",
+    "n_train": 98667,
+    "n_test": 24667,
+    "n_train_fit": 83867,
+    "n_val": 14800,
+    "cold_start_users": 179,
+    "test_users": 3401,
+    "cold_items": 1,
+    "test_items": 2907,
+    "sparsity": 0.9913784154466583
+  },
+  "best_params": {
+    "als": {
+      "factors": 32,
+      "regularization": 0.1,
+      "alpha": 10
+    },
+    "svd": {
+      "n_factors": 20,
+      "reg_all": 0.08
+    },
+    "itemknn": {
+      "k": 100,
+      "shrink": 50.0
+    },
+    "hybrid": {
+      "factors": 32,
+      "regularization": 0.1,
+      "alpha": 10,
+      "k": 100,
+      "shrink": 50.0,
+      "w_als": 2.0,
+      "w_content": 0.25,
+      "w_pop": 0.15
+    }
+  },
+  "results": {
+    "Random (sanity floor)": {
+      "Precision@5": 0.00157,
+      "Recall@5": 0.00196,
+      "NDCG@5": 0.00203,
+      "Precision@10": 0.0017,
+      "Recall@10": 0.00398,
+      "NDCG@10": 0.00285,
+      "Coverage@10": 1.0,
+      "Diversity@10": 0.80089,
+      "RMSE": NaN,
+      "MAE": NaN
+    },
+    "Popularity (baseline)": {
+      "Precision@5": 0.01967,
+      "Recall@5": 0.0201,
+      "NDCG@5": 0.02424,
+      "Precision@10": 0.01539,
+      "Recall@10": 0.03244,
+      "NDCG@10": 0.02661,
+      "Coverage@10": 0.008,
+      "Diversity@10": 0.29605,
+      "RMSE": 0.93361,
+      "MAE": 0.75405
+    },
+    "ALS (implicit MF)": {
+      "Precision@5": 0.02424,
+      "Recall@5": 0.02482,
+      "NDCG@5": 0.03066,
+      "Precision@10": 0.02143,
+      "Recall@10": 0.04576,
+      "NDCG@10": 0.03648,
+      "Coverage@10": 0.26442,
+      "Diversity@10": 0.5886,
+      "RMSE": NaN,
+      "MAE": NaN
+    },
+    "SVD (Surprise MF)": {
+      "Precision@5": 0.00085,
+      "Recall@5": 0.00104,
+      "NDCG@5": 0.0009,
+      "Precision@10": 0.00114,
+      "Recall@10": 0.00238,
+      "NDCG@10": 0.0015,
+      "Coverage@10": 0.02634,
+      "Diversity@10": 0.81504,
+      "RMSE": 0.93172,
+      "MAE": 0.73161
+    },
+    "ItemKNN (cosine CF)": {
+      "Precision@5": 0.02953,
+      "Recall@5": 0.02996,
+      "NDCG@5": 0.03771,
+      "Precision@10": 0.026,
+      "Recall@10": 0.05667,
+      "NDCG@10": 0.0449,
+      "Coverage@10": 0.19073,
+      "Diversity@10": 0.40499,
+      "RMSE": NaN,
+      "MAE": NaN
+    },
+    "Content-based (genres)": {
+      "Precision@5": 0.00862,
+      "Recall@5": 0.00909,
+      "NDCG@5": 0.01019,
+      "Precision@10": 0.00686,
+      "Recall@10": 0.0135,
+      "NDCG@10": 0.01123,
+      "Coverage@10": 0.73124,
+      "Diversity@10": 0.11675,
+      "RMSE": NaN,
+      "MAE": NaN
+    },
+    "Hybrid (ItemKNN + ALS + content)": {
+      "Precision@5": 0.03025,
+      "Recall@5": 0.03225,
+      "NDCG@5": 0.03772,
+      "Precision@10": 0.02646,
+      "Recall@10": 0.05504,
+      "NDCG@10": 0.04416,
+      "Coverage@10": 0.18706,
+      "Diversity@10": 0.48881,
+      "RMSE": NaN,
+      "MAE": NaN
+    }
+  }
+}

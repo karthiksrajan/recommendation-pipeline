@@ -1,0 +1,35 @@
+{
+  "key": "content",
+  "name": "Content-based (genres)",
+  "params": {
+    "tie_break": 0.001
+  },
+  "best_params": {},
+  "metrics": {
+    "Precision@5": 0.008624632473048023,
+    "Recall@5": 0.009091842279060566,
+    "NDCG@5": 0.010191578555094248,
+    "Coverage@5": 0.5311770590196733,
+    "Diversity@5": 0.07944858819246292,
+    "Precision@10": 0.006860503103560928,
+    "Recall@10": 0.013503098513598757,
+    "NDCG@10": 0.011225915051996533,
+    "Coverage@10": 0.731243747915972,
+    "Diversity@10": 0.1167505607008934,
+    "RMSE": NaN,
+    "MAE": NaN
+  },
+  "fit_seconds": 0.007178783416748047,
+  "tuning": [],
+  "mlflow_run_id": "75f15c35a2d2419c8f89df45b104f794",
+  "model_path": "models/content_based_genres.joblib",
+  "data_info": {
+    "n_train": 98667,
+    "n_users": 3816,
+    "n_items": 2999,
+    "n_eval_users": 3061,
+    "n_eval_rows": 18778,
+    "eval_positives_in_catalog": 15383,
+    "eval_positives_total": 20256
+  }
+}

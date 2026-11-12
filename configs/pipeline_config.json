@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "n_users": 4000,
+  "catalog_size": 3000,
+  "min_num_ratings": 2000,
+  "start_date": "2019-01-01",
+  "end_date": "2024-06-30",
+  "fault_rate": 0.02,
+  "test_fraction": 0.2,
+  "val_fraction": 0.15,
+  "positive_threshold": 4,
+  "ks": [
+    5,
+    10
+  ],
+  "bayes_prior": 20,
+  "max_reject_ratio": 0.05,
+  "source_csv": "/kaggle/input/datasets/karthiksundararajan/goodread-books/Goodreadss Books.csv"
+}

@@ -1,0 +1,93 @@
+"""The task registry: ONE definition of the pipeline's tasks and dependencies, shared by the Python orchestrator, the CLI
+and the Airflow DAG file (so the three can never drift apart)."""
+from __future__ import annotations
+
+import json
+
+from src.config import Paths
+from src.pipeline.orchestrator import QualityGateFailed, Workflow
+
+
+def _ingest(base, cfg):
+    from src.ingestion import ingest
+    return ingest.run(base, cfg)
+
+
+def _validate(base, cfg):
+    from src.validation import validate
+    return validate.run(base, cfg)
+
+
+def _gate(base, cfg):
+    from src.validation.validate import rejected_ratio
+    ratio = rejected_ratio(base)
+    if ratio > cfg["max_reject_ratio"]:
+        raise QualityGateFailed(f"interaction reject ratio {ratio:.2%} > threshold {cfg['max_reject_ratio']:.2%}")
+    return {"reject_ratio": round(ratio, 4), "threshold": cfg["max_reject_ratio"], "passed": True}
+
+
+def _prepare(base, cfg):
+    from src.preparation import clean
+    return clean.run(base, cfg)
+
+
+def _transform(base, cfg):
+    from src.transformation import transform
+    return transform.run(base, cfg)
+
+
+def _features(base, cfg):
+    from src.features import feature_store
+    return feature_store.run(base, cfg)
+
+
+def _train(key):
+    def fn(base, cfg):
+        from src.training import train
+        return train.run_model(base, cfg, key)
+    fn.__name__ = f"train_{key}"
+    return fn
+
+
+def _evaluate(base, cfg):
+    from src.evaluation import aggregate
+    return aggregate.run(base, cfg)
+
+
+def _batch(base, cfg):
+    from src.serving import recommend
+    return recommend.run(base, cfg)
+
+
+def _publish(base, cfg):
+    from src.reporting import publish
+    return publish.run(base, cfg)
+
+
+# (task name, callable, dependencies, description)
+TASK_SPECS = [
+    ("ingest_data", _ingest, [], "load Goodreads items, simulate users + interactions, inject faults"),
+    ("validate_data", _validate, ["ingest_data"], "Pandera schemas + custom rules -> error dataset + validation report"),
+    ("quality_gate", _gate, ["validate_data"], "stop the pipeline when too many rows are rejected"),
+    ("prepare_data", _prepare, ["quality_gate"], "cleaning, imputation, standardisation"),
+    ("transform_split", _transform, ["prepare_data"], "time-based split + activity / popularity / matrix"),
+    ("build_features", _features, ["transform_split"], "user / item / interaction features + catalog"),
+    ("train_random", _train("random"), ["build_features"], "random sanity floor"),
+    ("train_popularity", _train("popularity"), ["build_features"], "popularity baseline"),
+    ("train_als", _train("als"), ["build_features"], "implicit ALS (tuned)"),
+    ("train_svd", _train("svd"), ["build_features"], "Surprise SVD (tuned)"),
+    ("train_itemknn", _train("itemknn"), ["build_features"], "item-based CF (tuned)"),
+    ("train_content", _train("content"), ["build_features"], "content-based genre profile"),
+    ("train_hybrid", _train("hybrid"), ["train_als", "train_itemknn", "train_content"], "hybrid blend (tuned weights)"),
+    ("evaluate_models", _evaluate, ["train_random", "train_popularity", "train_als", "train_svd", "train_itemknn", "train_content", "train_hybrid"],
+     "results table, bootstrap CIs, significance tests, MLflow summary"),
+    ("batch_recommend", _batch, ["evaluate_models"], "top-10 lists for every user (prediction-time features)"),
+    ("publish_reports", _publish, ["evaluate_models", "batch_recommend"], "figures + final PDF report + run manifest"),
+]
+
+
+def build_workflow(base, cfg, name="recsys_data_pipeline", retries=1) -> Workflow:
+    wf = Workflow(name, base, cfg)
+    for n, fn, deps, desc in TASK_SPECS:
+        wf.add(n, fn, deps, retries=0 if n in ("quality_gate",) else retries, description=desc)
+    return wf
