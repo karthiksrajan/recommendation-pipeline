@@ -67,3 +67,17 @@ Fixed seeds, one config file (`configs/pipeline_config.json`, fingerprint `8726e
 ## Deliverable map
 `reports/architecture_diagram.png` - architecture | `reports/data_validation_report.html`, `data/errors/` - validation | `reports/feature_catalog.csv|md` - features |
 `reports/model_results.csv` (+ `_ci`, `significance_tests`) - evaluation | `reports/orchestration_run.png` - successful run | `reports/final_report.pdf` - report
+
+## Run screenshots
+
+**Successful orchestrated run (16/16 tasks)**
+![Successful run](docs_screenshots/docs/screenshots/08_orchestration_success.png)
+
+**Data-quality gate stops a bad run**
+![Quality gate stop](docs_screenshots/docs/screenshots/11_quality_gate_stop.png)
+
+**Cached re-run (idempotence)**
+![Cached re-run](docs_screenshots/docs/screenshots/10_resume_all_cached.png)
+
+**Model comparison table**
+![Results table](docs_screenshots/docs/screenshots/04_results_table.png)
