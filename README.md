@@ -70,14 +70,20 @@ Fixed seeds, one config file (`configs/pipeline_config.json`, fingerprint `8726e
 
 ## Run screenshots
 
+All run screenshots in one PDF: [reports/run_screenshots.pdf](reports/run_screenshots.pdf)
+
 **Successful orchestrated run (16/16 tasks)**
+
 ![Successful run](docs_screenshots/docs/screenshots/08_orchestration_success.png)
 
 **Data-quality gate stops a bad run**
+
 ![Quality gate stop](docs_screenshots/docs/screenshots/11_quality_gate_stop.png)
 
 **Cached re-run (idempotence)**
+
 ![Cached re-run](docs_screenshots/docs/screenshots/10_resume_all_cached.png)
 
 **Model comparison table**
+
 ![Results table](docs_screenshots/docs/screenshots/04_results_table.png)
